@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4 upload</title>
+</head>
+<body>
+    <h1>Bộ sưu tập ảnh</h1>
+    <div class="image-container">
+        <% images.forEach(image => {%>
+            <img src="/uploads/<%= image %>" alt="">    
+        <%})%>
+    </div>
+    <h2>Tải ảnh lên</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
